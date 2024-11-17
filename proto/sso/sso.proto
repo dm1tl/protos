@@ -15,7 +15,7 @@ message ValidateTokenRequest {
 }
 
 message ValidateTokenResponse {
-    string id = 1;
+    int64 id = 1;
 }
 
 message LoginRequest {
