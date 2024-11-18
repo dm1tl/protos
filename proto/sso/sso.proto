@@ -10,6 +10,18 @@ service Auth {
     rpc ValidateToken(ValidateTokenRequest) returns (ValidateTokenResponse);
 }
 
+service User {
+    rpc Delete(DeleteRequest) returns (DeleteResponse);
+}
+
+message DeleteRequest {
+    int64 id = 1;
+}
+
+message DeleteResponse {
+    string error_message = 1;
+}
+
 message ValidateTokenRequest {
     string token = 1;
 }
